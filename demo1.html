@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+<style type="text/css">
+
+.btn{
+width: 100px;
+height: 100px;
+background: #ff0
+color:ff0;
+border-radius : 5px;
+border: 1px slider:#f00;
+background-color: #f00
+}
+
+
+.div{
+background-color:green;
+width:120px;
+height:20px;
+padding:40px;
+color:#ffffff;
+}
+
+</style>
+</head>
+<body>
+
+<h2 onclick="test_alert()"> cheshi </h2>
+
+<h1 onclick="btn_click(this)"> dont click me</h1>
+
+<div class="div" onmouseover="test(this)" onmouseout="test1(this)">
+    move mouse
+</div>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+
+<button id ="btn" class="btn" onclick="test_alert()" ></button>
+<script type="text/javascript">
+var a =true;
+function btn_click(obj)
+{
+    if (a) {
+        obj.innerHTML="why are u try"
+    }else{
+         obj.innerHTML="dont click me"
+    }
+    a = !a;
+}
+
+  function test_alert()
+{
+        var age =Math.random()*20;
+        var date = new Date().getDay();
+        var arrays =  new Array("aaa","bbb","Ccc");
+
+        for (var i = 0; i < arrays.length; i++) {
+           document.write(arrays[i].toLowerCase()+"<br>")
+           // document.write("aaa".toUpperCase())
+        }
+}
+function mOver(obj)
+{
+obj.innerHTML="谢谢"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="把鼠标移到上面"
+}
+function test(obj)
+{
+    obj.innerHTML = "thank you "
+}
+
+
+
+function test1(obj)
+{
+    obj.innerHTML = "move mouse!"
+}
+    // if (date>20)
+
+    // {
+    //     document.getElementByTagNames("body").write(0);
+    // }
+
+    // if(age < 15)
+    // {
+    // // alert("To young to sample");
+    // document.getElementById("btn").innerHTML = "未成年人";
+
+    // }else{
+    //       document.getElementById("btn").innerHTML = "成年人";
+    // }
+
+
+</script>
+
+</body>
+</html>
